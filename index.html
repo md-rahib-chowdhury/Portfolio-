@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MD Rahib Chowdhury — IT Support &amp; Systems</title>
+<meta name="description" content="MD Rahib Chowdhury — Computer Science &amp; Technology graduate specializing in IT support, hardware diagnostics, and system troubleshooting.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg-0:#0E131A;
+    --bg-1:#141B24;
+    --bg-2:#181F29;
+    --line:#28323F;
+    --line-soft:#1F2833;
+    --text-0:#ECE9E1;
+    --text-1:#AEB6C0;
+    --text-2:#717C89;
+    --amber:#E8A33D;
+    --amber-dim:#8A6428;
+    --teal:#4FB8AC;
+    --teal-dim:#2E6E68;
+    --radius:2px;
+    --disp: 'Space Grotesk', sans-serif;
+    --body: 'IBM Plex Sans', sans-serif;
+    --mono: 'IBM Plex Mono', monospace;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--bg-0);
+    color:var(--text-0);
+    font-family:var(--body);
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:var(--teal);}
+  ::selection{background:var(--amber-dim);color:#fff;}
+
+  .wrap{max-width:960px;margin:0 auto;padding:0 28px;}
+
+  /* ---------- topbar ---------- */
+  header.topbar{
+    position:sticky;top:0;z-index:50;
+    background:rgba(14,19,26,0.88);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--line-soft);
+  }
+  .topbar-inner{
+    max-width:960px;margin:0 auto;padding:16px 28px;
+    display:flex;align-items:center;justify-content:space-between;
+  }
+  .logo{
+    font-family:var(--mono);font-size:14px;letter-spacing:0.04em;
+    color:var(--text-0);text-decoration:none;
+    display:flex;align-items:center;gap:8px;
+  }
+  .logo .dot{width:7px;height:7px;border-radius:50%;background:var(--amber);
+    box-shadow:0 0 0 3px rgba(232,163,61,0.15);
+    animation:pulse 2.4s ease-in-out infinite;}
+  @keyframes pulse{0%,100%{opacity:1;}50%{opacity:0.35;}}
+  nav{display:flex;gap:26px;}
+  nav a{
+    font-family:var(--mono);font-size:12.5px;letter-spacing:0.03em;
+    color:var(--text-1);text-decoration:none;text-transform:uppercase;
+    transition:color .2s;
+  }
+  nav a:hover{color:var(--amber);}
+  @media (max-width:640px){ nav{display:none;} }
+
+  /* ---------- hero ---------- */
+  .hero{
+    padding:88px 0 64px;
+    border-bottom:1px solid var(--line-soft);
+    background:
+      radial-gradient(ellipse 900px 400px at 15% -10%, rgba(79,184,172,0.10), transparent 60%),
+      radial-gradient(ellipse 700px 400px at 100% 0%, rgba(232,163,61,0.08), transparent 60%);
+  }
+  .hero-grid{
+    display:grid;grid-template-columns:1.35fr 0.9fr;gap:56px;align-items:center;
+  }
+  @media (max-width:760px){ .hero-grid{grid-template-columns:1fr;} }
+
+  .boot{
+    font-family:var(--mono);font-size:12.5px;color:var(--teal);
+    letter-spacing:0.02em;min-height:20px;margin-bottom:22px;
+  }
+  .boot::after{content:"▍";animation:blink 1s step-end infinite;color:var(--amber);}
+  @keyframes blink{50%{opacity:0;}}
+
+  .hero h1{
+    font-family:var(--disp);font-weight:700;
+    font-size:clamp(2.2rem,5vw,3.4rem);
+    line-height:1.05;margin:0 0 10px;color:var(--text-0);
+  }
+  .hero .role{
+    font-family:var(--mono);font-size:15px;color:var(--amber);
+    margin:0 0 22px;letter-spacing:0.01em;
+  }
+  .hero p.lead{
+    color:var(--text-1);font-size:16px;max-width:52ch;margin:0 0 30px;
+  }
+  .hero-cta{display:flex;gap:14px;flex-wrap:wrap;}
+  .btn{
+    font-family:var(--mono);font-size:13px;text-decoration:none;
+    padding:11px 20px;border-radius:var(--radius);
+    letter-spacing:0.02em;transition:all .2s;display:inline-flex;align-items:center;gap:8px;
+  }
+  .btn-primary{background:var(--amber);color:#161006;font-weight:500;}
+  .btn-primary:hover{background:#f2b558;}
+  .btn-ghost{border:1px solid var(--line);color:var(--text-0);}
+  .btn-ghost:hover{border-color:var(--teal);color:var(--teal);}
+
+  .device{
+    border:1px solid var(--line);
+    background:var(--bg-1);
+    border-radius:6px;
+    overflow:hidden;
+    position:relative;
+  }
+  .device-bar{
+    display:flex;align-items:center;gap:6px;
+    padding:9px 12px;border-bottom:1px solid var(--line-soft);
+    background:var(--bg-2);
+  }
+  .device-bar span{width:8px;height:8px;border-radius:50%;background:var(--line);}
+  .device-bar .label{
+    margin-left:auto;font-family:var(--mono);font-size:10.5px;color:var(--text-2);
+    letter-spacing:0.05em;
+  }
+  .device-photo{position:relative;overflow:hidden;}
+  .device-photo img{width:100%;display:block;filter:grayscale(30%) contrast(1.04);}
+  .scanline{
+    position:absolute;left:0;right:0;height:2px;
+    background:linear-gradient(90deg, transparent, rgba(79,184,172,0.85), transparent);
+    animation:scan 3.6s linear infinite;
+  }
+  @keyframes scan{0%{top:0%;}100%{top:100%;}}
+  .device-readout{
+    padding:14px 16px;font-family:var(--mono);font-size:11.5px;color:var(--text-1);
+    display:grid;gap:6px;
+  }
+  .device-readout .row{display:flex;justify-content:space-between;gap:10px;}
+  .device-readout .k{color:var(--text-2);}
+  .device-readout .v{color:var(--text-0);text-align:right;}
+  .status-ok{color:var(--teal);}
+
+  /* ---------- stat strip ---------- */
+  .stats{
+    border-bottom:1px solid var(--line-soft);
+    background:var(--bg-1);
+  }
+  .stats-grid{
+    display:grid;grid-template-columns:repeat(4,1fr);
+  }
+  @media (max-width:640px){ .stats-grid{grid-template-columns:repeat(2,1fr);} }
+  .stat{
+    padding:22px 24px;border-right:1px solid var(--line-soft);
+  }
+  .stat:last-child{border-right:none;}
+  .stat .n{font-family:var(--disp);font-size:1.6rem;font-weight:600;color:var(--amber);}
+  .stat .l{font-family:var(--mono);font-size:10.5px;color:var(--text-2);letter-spacing:0.05em;text-transform:uppercase;margin-top:4px;}
+
+  /* ---------- sections ---------- */
+  section{padding:64px 0;border-bottom:1px solid var(--line-soft);}
+  .sec-head{display:flex;align-items:baseline;gap:14px;margin-bottom:32px;}
+  .sec-head .tag{
+    font-family:var(--mono);font-size:11.5px;color:var(--text-2);
+    letter-spacing:0.08em;
+  }
+  .sec-head h2{
+    font-family:var(--disp);font-size:1.55rem;font-weight:600;margin:0;color:var(--text-0);
+  }
+  .sec-head::after{
+    content:"";flex:1;height:1px;background:var(--line-soft);
+  }
+  .reveal{opacity:0;transform:translateY(14px);transition:opacity .6s ease, transform .6s ease;}
+  .reveal.in{opacity:1;transform:none;}
+
+  /* about */
+  .about-body{display:grid;grid-template-columns:1fr;gap:16px;max-width:70ch;}
+  .about-body p{color:var(--text-1);font-size:15.5px;margin:0;}
+  .about-body strong{color:var(--text-0);font-weight:600;}
+
+  /* experience */
+  .log{border-left:1px solid var(--line);margin-left:6px;padding-left:26px;position:relative;}
+  .log-entry{position:relative;padding-bottom:6px;}
+  .log-entry::before{
+    content:"";position:absolute;left:-31px;top:4px;width:9px;height:9px;border-radius:50%;
+    background:var(--bg-0);border:2px solid var(--amber);
+  }
+  .log-meta{
+    font-family:var(--mono);font-size:11.5px;color:var(--teal);letter-spacing:0.03em;margin-bottom:6px;
+  }
+  .log-entry h3{font-family:var(--disp);font-size:1.15rem;margin:0 0 2px;color:var(--text-0);}
+  .log-entry .org{color:var(--text-2);font-size:13.5px;margin-bottom:12px;}
+  .log-entry ul{margin:0 0 20px;padding-left:18px;color:var(--text-1);font-size:14.5px;}
+  .log-entry li{margin-bottom:6px;}
+
+  /* education */
+  .edu-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
+  @media (max-width:640px){ .edu-grid{grid-template-columns:1fr;} }
+  .card{
+    background:var(--bg-1);border:1px solid var(--line-soft);border-radius:5px;padding:22px;
+  }
+  .card .yr{font-family:var(--mono);font-size:11px;color:var(--amber);letter-spacing:0.04em;}
+  .card h3{font-family:var(--disp);font-size:1.05rem;margin:8px 0 4px;color:var(--text-0);}
+  .card .inst{color:var(--text-2);font-size:13.5px;margin-bottom:10px;}
+  .card .score{
+    font-family:var(--mono);font-size:12.5px;color:var(--text-1);
+    border-top:1px solid var(--line-soft);padding-top:10px;
+  }
+
+  /* skills */
+  .mod-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;}
+  @media (max-width:640px){ .mod-grid{grid-template-columns:1fr;} }
+  .mod{border:1px solid var(--line-soft);border-radius:5px;padding:18px 20px;background:var(--bg-1);}
+  .mod .mod-head{
+    display:flex;align-items:center;gap:8px;margin-bottom:12px;
+    font-family:var(--mono);font-size:11px;color:var(--text-2);letter-spacing:0.06em;text-transform:uppercase;
+  }
+  .mod .mod-head .sq{width:7px;height:7px;background:var(--teal);}
+  .mod ul{list-style:none;margin:0;padding:0;}
+  .mod li{
+    font-size:13.5px;color:var(--text-1);padding:6px 0;
+    border-top:1px dashed var(--line-soft);
+  }
+  .mod li:first-child{border-top:none;}
+
+  /* languages */
+  .lang{display:flex;flex-direction:column;gap:16px;max-width:420px;}
+  .lang-row .top{display:flex;justify-content:space-between;font-size:13.5px;margin-bottom:6px;}
+  .lang-row .top .name{color:var(--text-0);font-weight:500;}
+  .lang-row .top .lvl{font-family:var(--mono);font-size:11px;color:var(--text-2);}
+  .bar{height:6px;background:var(--line-soft);border-radius:3px;overflow:hidden;}
+  .bar span{display:block;height:100%;background:linear-gradient(90deg,var(--teal-dim),var(--teal));border-radius:3px;}
+
+  /* contact / footer */
+  footer{padding:56px 0 40px;}
+  .contact-grid{
+    display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-bottom:40px;
+  }
+  @media (max-width:640px){ .contact-grid{grid-template-columns:1fr;} }
+  .contact-item{
+    border:1px solid var(--line-soft);border-radius:5px;padding:18px 20px;
+    display:flex;flex-direction:column;gap:4px;
+  }
+  .contact-item .k{font-family:var(--mono);font-size:10.5px;color:var(--text-2);letter-spacing:0.06em;text-transform:uppercase;}
+  .contact-item .v{color:var(--text-0);font-size:14.5px;text-decoration:none;}
+  .contact-item .v:hover{color:var(--amber);}
+  .foot-bottom{
+    display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;
+    font-family:var(--mono);font-size:11.5px;color:var(--text-2);
+    border-top:1px solid var(--line-soft);padding-top:22px;
+  }
+  .foot-bottom .status{display:flex;align-items:center;gap:7px;}
+  .foot-bottom .status .dot{width:6px;height:6px;border-radius:50%;background:var(--teal);
+    box-shadow:0 0 0 3px rgba(79,184,172,0.15);}
+
+  @media (prefers-reduced-motion: reduce){
+    *{animation:none !important;transition:none !important;}
+  }
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a href="#" class="logo"><span class="dot"></span>MD RAHIB CHOWDHURY</a>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#education">Education</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="boot" id="bootline"></div>
+      <h1>MD Rahib Chowdhury</h1>
+      <p class="role">IT Support Technician &amp; Computer Operator</p>
+      <p class="lead">Computer Science &amp; Technology graduate focused on keeping systems running — hardware diagnostics, OS administration, and hands-on troubleshooting, backed by corporate-level Microsoft Office fluency and a growing interest in applied security.</p>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="mailto:md.rahib1913@gmail.com">Email Me</a>
+        <a class="btn btn-ghost" href="https://github.com/md-rahib-chowdhury" target="_blank" rel="noopener">GitHub ↗</a>
+      </div>
+    </div>
+    <div class="device">
+      <div class="device-bar">
+        <span></span><span></span><span></span>
+        <span class="label">profile.jpg</span>
+      </div>
+      <div class="device-photo">
+        <img src="profile.jpg" alt="MD Rahib Chowdhury">
+        <div class="scanline"></div>
+      </div>
+      <div class="device-readout">
+        <div class="row"><span class="k">Location</span><span class="v">Chattogram, BD</span></div>
+        <div class="row"><span class="k">Diploma</span><span class="v">CST · Class of 2026</span></div>
+        <div class="row"><span class="k">Status</span><span class="v status-ok">Open to work</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="stats">
+  <div class="wrap stats-grid">
+    <div class="stat"><div class="n">3.16</div><div class="l">Diploma CGPA / 4.00</div></div>
+    <div class="stat"><div class="n">30</div><div class="l">Typing Speed (WPM)</div></div>
+    <div class="stat"><div class="n">2026</div><div class="l">Graduation Year</div></div>
+    <div class="stat"><div class="n">02</div><div class="l">Languages Spoken</div></div>
+  </div>
+</div>
+
+<section id="about" class="wrap reveal">
+  <div class="sec-head"><span class="tag">01</span><h2>About</h2></div>
+  <div class="about-body">
+    <p>I'm a Computer Science &amp; Technology graduate building a career around <strong>reliable, well-run systems</strong> — the kind of work that keeps an office's computers, network, and files functioning without anyone having to think about it.</p>
+    <p>My background blends practical IT support (hardware diagnostics, Windows &amp; Linux administration, troubleshooting) with corporate-level fluency in <strong>Microsoft Office</strong> and comfort handling web research, data entry, and document formatting for real teams.</p>
+    <p>Alongside that, I've been building foundational skills in <strong>cybersecurity and data protection</strong> through a hands-on internship, and I keep my work versioned and public on GitHub as I grow.</p>
+  </div>
+</section>
+
+<section id="experience" class="wrap reveal">
+  <div class="sec-head"><span class="tag">02</span><h2>Experience</h2></div>
+  <div class="log">
+    <div class="log-entry">
+      <div class="log-meta">SEPT 2025 — DEC 2025</div>
+      <h3>Jr. Penetration Tester (Intern)</h3>
+      <div class="org">Byte Capsule</div>
+      <ul>
+        <li>Managed daily computing operations, system configuration checks, and standard administrative software tools.</li>
+        <li>Conducted comprehensive web research and online data processing to support internal projects.</li>
+        <li>Formatted visual content layouts and basic graphic configurations for official reports and presentations.</li>
+        <li>Executed routine troubleshooting to optimize workplace technology and internet connection uptime.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="education" class="wrap reveal">
+  <div class="sec-head"><span class="tag">03</span><h2>Education</h2></div>
+  <div class="edu-grid">
+    <div class="card">
+      <div class="yr">GRADUATING 2026</div>
+      <h3>Diploma in Computer Science &amp; Technology</h3>
+      <div class="inst">Bangladesh Sweden Polytechnic Institute</div>
+      <div class="score">CGPA: 3.16 / 4.00</div>
+    </div>
+    <div class="card">
+      <div class="yr">PASSED 2021</div>
+      <h3>Secondary School Certificate</h3>
+      <div class="inst">Karnaphuli Paper Mills High School and College</div>
+      <div class="score">GPA: 3.61 / 5.00</div>
+    </div>
+  </div>
+</section>
+
+<section id="skills" class="wrap reveal">
+  <div class="sec-head"><span class="tag">04</span><h2>Skills</h2></div>
+  <div class="mod-grid">
+    <div class="mod">
+      <div class="mod-head"><span class="sq"></span>Office &amp; Documentation</div>
+      <ul>
+        <li>Microsoft Office (Word, Excel, PowerPoint)</li>
+        <li>Office Documentation &amp; Data Entry</li>
+        <li>English Typing — 30 WPM</li>
+        <li>Basic Graphic Design</li>
+      </ul>
+    </div>
+    <div class="mod">
+      <div class="mod-head"><span class="sq"></span>Systems &amp; Support</div>
+      <ul>
+        <li>Windows &amp; Linux OS Administration</li>
+        <li>Hardware Diagnostics &amp; IT Support</li>
+        <li>Internet &amp; Computer Troubleshooting</li>
+      </ul>
+    </div>
+    <div class="mod">
+      <div class="mod-head"><span class="sq"></span>Security &amp; Version Control</div>
+      <ul>
+        <li>Basic Cybersecurity &amp; Data Protection</li>
+        <li>GitHub &amp; Version Control</li>
+      </ul>
+    </div>
+    <div class="mod">
+      <div class="mod-head"><span class="sq"></span>Research</div>
+      <ul>
+        <li>Internet Browsing &amp; Advanced Web Research</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="wrap reveal">
+  <div class="sec-head"><span class="tag">05</span><h2>Languages</h2></div>
+  <div class="lang">
+    <div class="lang-row">
+      <div class="top"><span class="name">Bangla</span><span class="lvl">NATIVE</span></div>
+      <div class="bar"><span style="width:100%"></span></div>
+    </div>
+    <div class="lang-row">
+      <div class="top"><span class="name">English</span><span class="lvl">INTERMEDIATE</span></div>
+      <div class="bar"><span style="width:60%"></span></div>
+    </div>
+  </div>
+</section>
+
+<footer id="contact" class="wrap">
+  <div class="sec-head"><span class="tag">06</span><h2>Contact</h2></div>
+  <div class="contact-grid">
+    <div class="contact-item">
+      <span class="k">Email</span>
+      <a class="v" href="mailto:md.rahib1913@gmail.com">md.rahib1913@gmail.com</a>
+    </div>
+    <div class="contact-item">
+      <span class="k">Phone</span>
+      <a class="v" href="tel:+8801822433624">+880 1822-433624</a>
+    </div>
+    <div class="contact-item">
+      <span class="k">GitHub</span>
+      <a class="v" href="https://github.com/md-rahib-chowdhury" target="_blank" rel="noopener">github.com/md-rahib-chowdhury</a>
+    </div>
+    <div class="contact-item">
+      <span class="k">Location</span>
+      <span class="v">Chattogram, Bangladesh</span>
+    </div>
+  </div>
+  <div class="foot-bottom">
+    <span>© 2026 MD Rahib Chowdhury</span>
+    <span class="status"><span class="dot"></span>SYSTEM ONLINE — OPEN TO OPPORTUNITIES</span>
+  </div>
+</footer>
+
+<script>
+  // Boot sequence typewriter
+  const lines = [
+    "> initializing profile...",
+    "> loading skills module... done",
+    "> status: ready"
+  ];
+  const el = document.getElementById('bootline');
+  let li = 0, ci = 0;
+  function typeBoot(){
+    if(li >= lines.length){ return; }
+    const current = lines[li];
+    if(ci <= current.length){
+      el.textContent = current.slice(0, ci);
+      ci++;
+      setTimeout(typeBoot, 22);
+    } else {
+      li++; ci = 0;
+      setTimeout(typeBoot, 420);
+    }
+  }
+  typeBoot();
+
+  // Scroll reveal
+  const observer = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); } });
+  }, {threshold:0.12});
+  document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+</script>
+
+</body>
+</html>
