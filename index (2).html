@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MD Rahib Chowdhury | IT Support Technician</title>
+<meta name="description" content="MD Rahib Chowdhury, Computer Science & Technology graduate in Chattogram, Bangladesh. IT support, hardware diagnostics, Windows and Linux administration, and basic cybersecurity.">
+<meta name="theme-color" content="#0E131A">
+<meta property="og:type" content="website">
+<meta property="og:title" content="MD Rahib Chowdhury | IT Support Technician">
+<meta property="og:description" content="IT support, hardware diagnostics, Windows and Linux administration, and basic cybersecurity. Based in Chattogram, Bangladesh.">
+<meta property="og:image" content="profile.jpg">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230E131A'/%3E%3Ctext x='16' y='22' font-family='monospace' font-size='15' font-weight='700' fill='%23E8A33D' text-anchor='middle'%3ERC%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+--bg-0:#0E131A;--bg-1:#141B24;--bg-2:#181F29;
+--line:#28323F;--line-soft:#1F2833;
+--text-0:#ECE9E1;--text-1:#B4BCC6;--text-2:#8691A0;
+--amber:#E8A33D;--amber-dim:#8A6428;--teal:#4FB8AC;
+--disp:'Space Grotesk',system-ui,sans-serif;
+--body:'IBM Plex Sans',system-ui,sans-serif;
+--mono:'IBM Plex Mono',ui-monospace,monospace;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;background:var(--bg-0);color:var(--text-0);font-family:var(--body);line-height:1.65;-webkit-font-smoothing:antialiased}
+a{color:var(--teal)}
+:focus-visible{outline:2px solid var(--amber);outline-offset:3px}
+::selection{background:var(--amber-dim);color:#fff}
+.wrap{max-width:960px;margin:0 auto;padding:0 28px}
+.skip{position:absolute;left:-999px;top:8px;background:var(--amber);color:#161006;padding:8px 14px;z-index:100;font-family:var(--mono);font-size:13px}
+.skip:focus{left:8px}
+
+/* top bar */
+.topbar{position:sticky;top:0;z-index:50;background:rgba(14,19,26,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line-soft)}
+.topbar-inner{max-width:960px;margin:0 auto;padding:14px 28px;display:flex;align-items:center;justify-content:space-between;position:relative}
+.logo{font-family:var(--mono);font-size:14px;color:var(--text-0);text-decoration:none;display:flex;align-items:center;gap:8px}
+.logo .dot{width:7px;height:7px;border-radius:50%;background:var(--amber);box-shadow:0 0 0 3px rgba(232,163,61,.15)}
+nav{display:flex;gap:26px}
+nav a{font-family:var(--mono);font-size:13px;color:var(--text-1);text-decoration:none;transition:color .2s}
+nav a:hover{color:var(--amber)}
+.menu-btn{display:none;background:none;border:1px solid var(--line);color:var(--text-0);font-family:var(--mono);font-size:13px;padding:7px 12px;border-radius:3px;cursor:pointer}
+@media (max-width:700px){
+.menu-btn{display:block}
+nav{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;gap:0;background:var(--bg-1);border-bottom:1px solid var(--line)}
+nav.open{display:flex}
+nav a{padding:14px 28px;border-top:1px solid var(--line-soft);font-size:14px}
+}
+
+/* hero */
+.hero{padding:80px 0 60px;border-bottom:1px solid var(--line-soft);background:radial-gradient(ellipse 900px 400px at 15% -10%,rgba(79,184,172,.10),transparent 60%),radial-gradient(ellipse 700px 400px at 100% 0,rgba(232,163,61,.07),transparent 60%)}
+.hero-grid{display:grid;grid-template-columns:1.35fr .9fr;gap:56px;align-items:center}
+@media (max-width:760px){.hero-grid{grid-template-columns:1fr;gap:36px}.hero{padding:56px 0 44px}}
+.boot{font-family:var(--mono);font-size:13px;color:var(--teal);min-height:22px;margin-bottom:20px}
+.boot::after{content:"▍";color:var(--amber);animation:blink 1s step-end infinite}
+@keyframes blink{50%{opacity:0}}
+h1{font-family:var(--disp);font-weight:700;font-size:clamp(2.2rem,5vw,3.4rem);line-height:1.05;margin:0 0 12px}
+.role{font-family:var(--mono);font-size:15px;color:var(--amber);margin:0 0 20px}
+.lead{color:var(--text-1);font-size:16.5px;max-width:54ch;margin:0 0 28px}
+.hero-cta{display:flex;gap:12px;flex-wrap:wrap}
+.btn{font-family:var(--mono);font-size:13.5px;text-decoration:none;padding:11px 18px;border-radius:3px;transition:background .2s,border-color .2s,color .2s}
+.btn-primary{background:var(--amber);color:#161006;font-weight:500}
+.btn-primary:hover{background:#f2b558}
+.btn-ghost{border:1px solid var(--line);color:var(--text-0)}
+.btn-ghost:hover{border-color:var(--teal);color:var(--teal)}
+.device{border:1px solid var(--line);background:var(--bg-1);border-radius:6px;overflow:hidden}
+.device-bar{display:flex;align-items:center;gap:6px;padding:9px 12px;border-bottom:1px solid var(--line-soft);background:var(--bg-2)}
+.device-bar span{width:8px;height:8px;border-radius:50%;background:var(--line)}
+.device-bar .label{margin-left:auto;width:auto;height:auto;border-radius:0;background:none;font-family:var(--mono);font-size:11px;color:var(--text-2)}
+.device img{width:100%;display:block;filter:grayscale(25%) contrast(1.04)}
+.readout{padding:14px 16px;font-family:var(--mono);font-size:12px;color:var(--text-1);display:grid;gap:6px}
+.readout .row{display:flex;justify-content:space-between;gap:10px}
+.readout .k{color:var(--text-2)}
+.readout .v{color:var(--text-0);text-align:right}
+.readout .ok{color:var(--teal)}
+
+/* stats */
+.stats{border-bottom:1px solid var(--line-soft);background:var(--bg-1)}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr)}
+@media (max-width:640px){.stats-grid{grid-template-columns:repeat(2,1fr)}.stat:nth-child(2){border-right:none}.stat:nth-child(-n+2){border-bottom:1px solid var(--line-soft)}}
+.stat{padding:22px 24px;border-right:1px solid var(--line-soft)}
+.stat:last-child{border-right:none}
+.stat .n{font-family:var(--disp);font-size:1.6rem;font-weight:600;color:var(--amber)}
+.stat .l{font-size:13px;color:var(--text-2);margin-top:2px}
+
+/* sections */
+section{padding:60px 0;border-bottom:1px solid var(--line-soft)}
+.sec-head{display:flex;align-items:center;gap:14px;margin-bottom:30px}
+.sec-head h2{font-family:var(--disp);font-size:1.5rem;font-weight:600;margin:0}
+.sec-head::after{content:"";flex:1;height:1px;background:var(--line-soft)}
+.about-body{display:grid;gap:16px;max-width:68ch}
+.about-body p{color:var(--text-1);font-size:16px;margin:0}
+.about-body strong{color:var(--text-0);font-weight:600}
+
+/* experience */
+.log{border-left:1px solid var(--line);margin-left:6px;padding-left:26px}
+.log-entry{position:relative}
+.log-entry::before{content:"";position:absolute;left:-32px;top:5px;width:9px;height:9px;border-radius:50%;background:var(--bg-0);border:2px solid var(--amber)}
+.log-meta{font-family:var(--mono);font-size:12.5px;color:var(--teal);margin-bottom:6px}
+.log-entry h3{font-family:var(--disp);font-size:1.15rem;margin:0 0 2px}
+.org{color:var(--text-2);font-size:14px;margin-bottom:12px}
+.log-entry ul{margin:0;padding-left:18px;color:var(--text-1);font-size:15px;max-width:68ch}
+.log-entry li{margin-bottom:6px}
+
+/* cards */
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+@media (max-width:640px){.grid2{grid-template-columns:1fr}}
+.card{background:var(--bg-1);border:1px solid var(--line-soft);border-radius:5px;padding:22px}
+.card .yr{font-family:var(--mono);font-size:12px;color:var(--amber)}
+.card h3{font-family:var(--disp);font-size:1.08rem;margin:8px 0 4px}
+.card .inst{color:var(--text-2);font-size:14px;margin-bottom:10px}
+.card p{margin:0 0 12px;color:var(--text-1);font-size:14.5px}
+.card .score{font-family:var(--mono);font-size:13px;color:var(--text-1);border-top:1px solid var(--line-soft);padding-top:10px}
+.tags{display:flex;flex-wrap:wrap;gap:8px;padding:0;margin:0;list-style:none}
+.tags li{font-family:var(--mono);font-size:12px;color:var(--teal);border:1px solid var(--line);border-radius:3px;padding:3px 9px}
+.card a.more{font-family:var(--mono);font-size:13px;display:inline-block;margin-top:14px}
+
+/* skills */
+.mod{border:1px solid var(--line-soft);border-radius:5px;padding:18px 20px;background:var(--bg-1)}
+.mod h3{display:flex;align-items:center;gap:8px;margin:0 0 10px;font-family:var(--mono);font-size:13px;font-weight:500;color:var(--text-0)}
+.mod h3::before{content:"";width:7px;height:7px;background:var(--teal)}
+.mod ul{list-style:none;margin:0;padding:0}
+.mod li{font-size:14.5px;color:var(--text-1);padding:6px 0;border-top:1px dashed var(--line-soft)}
+.mod li:first-child{border-top:none}
+
+/* languages */
+.langs{display:grid;gap:12px;max-width:440px}
+.lang-row{display:flex;justify-content:space-between;align-items:center;gap:14px;border-bottom:1px solid var(--line-soft);padding-bottom:10px;font-size:15px}
+.lang-row .lvl{font-family:var(--mono);font-size:12.5px;color:var(--text-1)}
+
+/* contact */
+footer{padding:56px 0 40px}
+.contact-item{border:1px solid var(--line-soft);border-radius:5px;padding:18px 20px;display:flex;flex-direction:column;gap:4px;background:var(--bg-1)}
+.contact-item .k{font-family:var(--mono);font-size:12px;color:var(--text-2)}
+.contact-item .v{color:var(--text-0);font-size:15.5px;text-decoration:none;overflow-wrap:anywhere}
+a.v:hover{color:var(--amber)}
+.contact-grid{margin-bottom:36px}
+.contact-item:last-child{grid-column:1/-1}
+.card .tags{margin-top:auto}
+.card{display:flex;flex-direction:column}
+.toast{position:fixed;left:50%;bottom:28px;transform:translate(-50%,20px);background:var(--bg-2);border:1px solid var(--teal);color:var(--text-0);font-family:var(--mono);font-size:13.5px;padding:12px 18px;border-radius:4px;opacity:0;pointer-events:none;transition:opacity .25s,transform .25s;z-index:200;max-width:90vw;text-align:center}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+.foot-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;font-family:var(--mono);font-size:12px;color:var(--text-2);border-top:1px solid var(--line-soft);padding-top:20px}
+.foot-bottom .status{display:flex;align-items:center;gap:7px}
+.foot-bottom .dot{width:6px;height:6px;border-radius:50%;background:var(--teal);box-shadow:0 0 0 3px rgba(79,184,172,.15)}
+@media print{.topbar,.menu-btn{display:none}body{background:#fff;color:#000}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<a class="skip" href="#about">Skip to content</a>
+
+<header class="topbar">
+<div class="topbar-inner">
+<a href="#top" class="logo"><span class="dot"></span>MD Rahib Chowdhury</a>
+<button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mainNav">Menu</button>
+<nav id="mainNav" aria-label="Main">
+<a href="#about">About</a>
+<a href="#experience">Experience</a>
+<a href="#projects">Projects</a>
+<a href="#education">Education</a>
+<a href="#skills">Skills</a>
+<a href="#contact">Contact</a>
+</nav>
+</div>
+</header>
+
+<main id="top">
+<div class="hero">
+<div class="wrap hero-grid">
+<div>
+<div class="boot" id="bootline" aria-hidden="true"></div>
+<h1>MD Rahib Chowdhury</h1>
+<p class="role">IT Support Technician &amp; Computer Operator</p>
+<p class="lead">Computer Science &amp; Technology graduate who keeps systems running: hardware diagnostics, Windows and Linux administration, and hands-on troubleshooting, backed by strong Microsoft Office skills and a growing focus on security.</p>
+<div class="hero-cta">
+<a class="btn btn-primary" href="mailto:md.rahib1913@gmail.com" data-copy="md.rahib1913@gmail.com" data-label="Email">Email me</a>
+<a class="btn btn-ghost" href="tel:+8801822433624" data-copy="+880 1822-433624" data-label="Phone number">Call me</a>
+<a class="btn btn-ghost" href="https://github.com/md-rahib-chowdhury" target="_blank" rel="noopener">GitHub</a>
+</div>
+</div>
+<div class="device">
+<div class="device-bar"><span></span><span></span><span></span><span class="label">profile.jpg</span></div>
+<img src="profile.jpg" alt="Portrait of MD Rahib Chowdhury" width="480" height="480" fetchpriority="high">
+<div class="readout">
+<div class="row"><span class="k">Location</span><span class="v">Chattogram, Bangladesh</span></div>
+<div class="row"><span class="k">Diploma</span><span class="v">Computer Science &amp; Technology, 2026</span></div>
+<div class="row"><span class="k">Status</span><span class="v ok">Open to work</span></div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="stats">
+<div class="wrap stats-grid">
+<div class="stat"><div class="n">3.16</div><div class="l">Diploma CGPA (out of 4.00)</div></div>
+<div class="stat"><div class="n">30</div><div class="l">Words per minute typing</div></div>
+<div class="stat"><div class="n">4 mo</div><div class="l">Internship, Sept to Dec 2025</div></div>
+<div class="stat"><div class="n">2</div><div class="l">Languages spoken</div></div>
+</div>
+</div>
+
+<section id="about" class="wrap">
+<div class="sec-head"><h2>About</h2></div>
+<div class="about-body">
+<p>I build my career around <strong>reliable, well-run systems</strong>: the work that keeps an office's computers, network, and files running without anyone having to think about it.</p>
+<p>My background combines practical IT support (hardware diagnostics, Windows and Linux administration, troubleshooting) with solid <strong>Microsoft Office</strong> skills, web research, data entry, and document formatting for real teams.</p>
+<p>I'm also building a foundation in <strong>cybersecurity</strong> through a hands-on internship and home-lab projects: SIEM monitoring with Wazuh, penetration testing practice with Metasploit, and Bash and batch scripting. All of it is on GitHub.</p>
+</div>
+</section>
+
+<section id="experience" class="wrap">
+<div class="sec-head"><h2>Experience</h2></div>
+<div class="log">
+<div class="log-entry">
+<div class="log-meta">Sept 2025 to Dec 2025</div>
+<h3>Jr. Penetration Tester (Intern)</h3>
+<div class="org">Byte Capsule</div>
+<ul>
+<li>Ran daily computing operations, system configuration checks, and administrative software tools.</li>
+<li>Researched and processed online data to support internal projects.</li>
+<li>Formatted layouts and basic graphics for official reports and presentations.</li>
+<li>Troubleshot workplace technology and kept internet connections stable.</li>
+</ul>
+</div>
+</div>
+</section>
+
+<section id="projects" class="wrap">
+<div class="sec-head"><h2>Projects</h2></div>
+<div class="grid2">
+<article class="card">
+<h3>LinuxSys</h3>
+<p>An interactive Bash tool that simplifies everyday Linux tasks. From a colorful, menu-driven terminal you can run updates, check system information, and play a built-in guessing game.</p>
+<ul class="tags"><li>Bash</li><li>Linux</li><li>Automation</li></ul>
+<a class="more" href="https://github.com/md-rahib-chowdhury/LinuxSys" target="_blank" rel="noopener">View on GitHub</a>
+</article>
+<article class="card">
+<h3>Wazuh SIEM and SOC monitoring</h3>
+<p>Installation, configuration, and basic use of the Wazuh SIEM to monitor security events such as failed logins and file changes. Built for education and SOC practice.</p>
+<ul class="tags"><li>Wazuh</li><li>SIEM</li><li>SOC</li></ul>
+<a class="more" href="https://github.com/md-rahib-chowdhury/wazuh-installation-and-soc-monitoring" target="_blank" rel="noopener">View on GitHub</a>
+</article>
+<article class="card">
+<h3>Metasploit</h3>
+<p>Notes and practice with the open-source Metasploit penetration testing framework, used to identify and validate vulnerabilities in a legal, controlled environment.</p>
+<ul class="tags"><li>Metasploit</li><li>Pentesting</li><li>Lab</li></ul>
+<a class="more" href="https://github.com/md-rahib-chowdhury/Metasploit" target="_blank" rel="noopener">View on GitHub</a>
+</article>
+<article class="card">
+<h3>Storm-Breaker security awareness</h3>
+<p>An educational project on how camera and permission-based phishing attacks work, explained at a conceptual level to raise awareness.</p>
+<ul class="tags"><li>Awareness</li><li>Phishing</li><li>Education</li></ul>
+<a class="more" href="https://github.com/md-rahib-chowdhury/Storm-Breaker-Security-Awareness" target="_blank" rel="noopener">View on GitHub</a>
+</article>
+<article class="card">
+<h3>Windows Optimizer</h3>
+<p>A single-file Windows batch script that applies common performance, gaming, and privacy tweaks, such as the power plan, background services, and temp cleanup, from a simple menu.</p>
+<ul class="tags"><li>Batch</li><li>Windows</li><li>Scripting</li></ul>
+<a class="more" href="https://github.com/md-rahib-chowdhury/Windows-Optimizer" target="_blank" rel="noopener">View on GitHub</a>
+</article>
+<article class="card">
+<h3>This portfolio site</h3>
+<p>A fast single-page site in plain HTML, CSS, and JavaScript. It works on phones, supports keyboard navigation, and is versioned on GitHub.</p>
+<ul class="tags"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
+<a class="more" href="https://github.com/md-rahib-chowdhury/Portfolio-" target="_blank" rel="noopener">View on GitHub</a>
+</article>
+</div>
+</section>
+
+<section id="education" class="wrap">
+<div class="sec-head"><h2>Education</h2></div>
+<div class="grid2">
+<div class="card">
+<div class="yr">Class of 2026</div>
+<h3>Diploma in Computer Science &amp; Technology</h3>
+<div class="inst">Bangladesh Sweden Polytechnic Institute</div>
+<div class="score">CGPA: 3.16 / 4.00</div>
+</div>
+<div class="card">
+<div class="yr">Passed 2021</div>
+<h3>Secondary School Certificate</h3>
+<div class="inst">Karnaphuli Paper Mills High School and College</div>
+<div class="score">GPA: 3.61 / 5.00</div>
+</div>
+</div>
+</section>
+
+<section id="skills" class="wrap">
+<div class="sec-head"><h2>Skills</h2></div>
+<div class="grid2">
+<div class="mod">
+<h3>Office and documentation</h3>
+<ul>
+<li>Microsoft Office (Word, Excel, PowerPoint)</li>
+<li>Office documentation and data entry</li>
+<li>English typing at 30 WPM</li>
+<li>Basic graphic design</li>
+</ul>
+</div>
+<div class="mod">
+<h3>Systems and support</h3>
+<ul>
+<li>Windows and Linux administration</li>
+<li>Bash and batch scripting</li>
+<li>Hardware diagnostics and IT support</li>
+<li>Internet and computer troubleshooting</li>
+</ul>
+</div>
+<div class="mod">
+<h3>Security and version control</h3>
+<ul>
+<li>Basic cybersecurity and data protection</li>
+<li>SIEM monitoring (Wazuh) and SOC basics</li>
+<li>Penetration testing practice (Metasploit)</li>
+<li>Git and GitHub</li>
+</ul>
+</div>
+<div class="mod">
+<h3>Research</h3>
+<ul>
+<li>Internet browsing and advanced web research</li>
+</ul>
+</div>
+</div>
+</section>
+
+<section class="wrap" aria-labelledby="langHead">
+<div class="sec-head"><h2 id="langHead">Languages</h2></div>
+<div class="langs">
+<div class="lang-row"><span>Bangla</span><span class="lvl">Native</span></div>
+<div class="lang-row"><span>English</span><span class="lvl">Intermediate</span></div>
+</div>
+</section>
+</main>
+
+<footer id="contact" class="wrap">
+<div class="sec-head"><h2>Contact</h2></div>
+<div class="grid2 contact-grid">
+<div class="contact-item"><span class="k">Email</span><a class="v" href="mailto:md.rahib1913@gmail.com" data-copy="md.rahib1913@gmail.com" data-label="Email">md.rahib1913@gmail.com</a></div>
+<div class="contact-item"><span class="k">Phone</span><a class="v" href="tel:+8801822433624" data-copy="+880 1822-433624" data-label="Phone number">+880 1822-433624</a></div>
+<div class="contact-item"><span class="k">GitHub</span><a class="v" href="https://github.com/md-rahib-chowdhury" target="_blank" rel="noopener">github.com/md-rahib-chowdhury</a></div>
+<div class="contact-item"><span class="k">LinkedIn</span><a class="v" href="https://www.linkedin.com/in/md-rahib-chowdhury/" target="_blank" rel="noopener">linkedin.com/in/md-rahib-chowdhury</a></div>
+<div class="contact-item"><span class="k">Location</span><span class="v">Chattogram, Bangladesh</span></div>
+</div>
+<div class="foot-bottom">
+<span>© 2026 MD Rahib Chowdhury</span>
+<span class="status"><span class="dot"></span>Open to opportunities</span>
+</div>
+</footer>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script>
+// Boot line (shown instantly when reduced motion is preferred)
+const lines=["> initializing profile...","> loading skills module... done","> status: ready"];
+const el=document.getElementById('bootline');
+if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+  el.textContent=lines[2];
+}else{
+  let li=0,ci=0;
+  (function type(){
+    if(li>=lines.length)return;
+    const cur=lines[li];
+    if(ci<=cur.length){el.textContent=cur.slice(0,ci++);setTimeout(type,22)}
+    else{li++;ci=0;setTimeout(type,420)}
+  })();
+}
+// Mobile menu
+const btn=document.getElementById('menuBtn'),nav=document.getElementById('mainNav');
+btn.addEventListener('click',()=>{
+  const open=nav.classList.toggle('open');
+  btn.setAttribute('aria-expanded',open);
+});
+nav.addEventListener('click',e=>{
+  if(e.target.tagName==='A'){nav.classList.remove('open');btn.setAttribute('aria-expanded','false')}
+});
+
+// Email and phone: on computers without a mail or phone app, mailto:/tel: links do nothing.
+// So on non-touch devices, copy the value and show it. Phones still open the mail/dial app.
+const toast=document.getElementById('toast');let tt;
+function say(msg){toast.textContent=msg;toast.classList.add('show');clearTimeout(tt);tt=setTimeout(()=>toast.classList.remove('show'),3800)}
+document.querySelectorAll('a[data-copy]').forEach(a=>{
+  a.addEventListener('click',e=>{
+    if(window.matchMedia('(pointer: coarse)').matches)return;
+    e.preventDefault();
+    const v=a.dataset.copy,l=a.dataset.label;
+    const done=()=>say(l+' copied: '+v);
+    const fail=()=>say(l+': '+v);
+    if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(v).then(done,fail)}
+    else{try{const t=document.createElement('textarea');t.value=v;t.style.position='fixed';t.style.opacity='0';document.body.appendChild(t);t.select();document.execCommand('copy');t.remove();done()}catch(_){fail()}}
+  });
+});
+</script>
+</body>
+</html>
